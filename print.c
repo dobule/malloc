@@ -1,5 +1,4 @@
 /* Ryan Gelston
- * CSC 453 (Fall 2018, Nico)
  * Filename: print.c
  * Description: Contains functions for printing to the console when debugging 
  *    malloc.c

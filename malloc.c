@@ -1,6 +1,4 @@
 /* Name: Ryan Gelston
- * Term: Fall 2018 (CSC 453)
- * Assignment: Assignment 1
  * Description: Includes implimentations of malloc, calloc, realloc, and free.
  */
 

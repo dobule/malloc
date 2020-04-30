@@ -1,5 +1,4 @@
 /* Ryan Gelston
- * CSC 453 (Fall 2018, Nico)
  * Filename: print.h
  * Description: Header file for print.c, which contains printing functions
  *    which don't use malloc.
