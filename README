@@ -1,9 +1,3 @@
-# Name: Ryan Gelston
-# Assignment: 1
-# Class: CSC 453 
-# Instructor: Nico
-# Term: Fall 2018
-
 Files included:
    malloc.c -- Contains an implimentation of malloc, calloc, realloc, and free
    malloc.h -- Header file for malloc.c
