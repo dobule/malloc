@@ -1,0 +1,54 @@
+# Name: Ryan Gelston
+# Assignment: 1
+# Class: CSC 453 
+# Instructor: Nico
+# Term: Fall 2018
+
+Files included:
+   malloc.c -- Contains an implimentation of malloc, calloc, realloc, and free
+   malloc.h -- Header file for malloc.c
+   test_malloc.c -- Contains tests for malloc, calloc, realloc and free
+   print.c -- Contains functions that print to stderr and do not use malloc. 
+      This is used for debugging.
+   print.h -- Header file for print.h
+   Makefile -- Contains instructions for compiling malloc.c and test_malloc.c
+
+
+DEBUG_MALLOC environment variable:
+   The printing functions expect this variable to either not exist, in which
+   case it's treated as having the value '0', or to hold a positive integer.
+   As the value of DEBUG_MALLOC increases, more debug messages will appear.
+   Below is a guide of what messages appear given each value.
+
+   '0' -- None.
+   '1' -- Strings indicating the completion of one of the functions in
+            malloc.h
+   '2' -- Invocation of support functions, and certain actions taken by 
+            the support functions,
+   '3' -- More detailed actions of support functions. The output becomes 
+            quite cluttered by this point.
+   '4' -- There are no additional messages at debug level '4'
+
+
+Notes about testing:
+   Most tests are for basic functionality of all of the functions in malloc.h.
+   More rigorous testing comes from randomized testing. During randomized
+   testing a maximum number of blocks are set to be allocated, as defined by 
+   NUM_BLOCKS in test_malloc.c. References to these blocks are held in the 
+   void* array res. A block is randomly chosen from the array, if the block is
+   free, a random amount of memory is allocated to it, if the block is 
+   already allocated, it is freed. The randomized test for realloc is similar
+   to that for malloc, with the exception that given an allocated block
+   it will choose to realloc 50% of the time, and free the other 50%.
+
+   The randomized testing is mainly used to assure my implimentation is 
+   robust.
+
+   With the random realloc testing, I've encountered problems when given over 
+   7000 iterations of mallocing, reallocing, and freeing. The break isn't 
+   set back to the initial break point before anything is alloced. I've spent
+   a few days trying to figure out why this happens with little success. 
+
+   I wish that I could spend more time trying to get this program to work,
+   though my brain seems to be giving out, and I'm taking that as a cue for
+   me to move on. 
